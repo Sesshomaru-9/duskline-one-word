@@ -16,10 +16,11 @@ one beat.
 
 ## How it works
 
-`main.py` (Python 3.13, standard library only) writes the word to
-`$MAKEFUN_OUTPUT_DIR/entry.txt` — and nothing else. It never writes to the
+`main.py` (Python 3.13, standard library only) validates the word — a single
+token, 1–30 characters, not only whitespace — then writes it to
+`$MAKEFUN_OUTPUT_DIR/entry.txt` and nothing else. It never writes to the
 repository directory, and it exits cleanly (code 0) if the output directory
-cannot be written.
+is missing or cannot be written.
 
 Run:
 
